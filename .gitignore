@@ -1,3 +1,4 @@
 .apax
 .env
 bin
+*.tgz

@@ -23,8 +23,6 @@
       apax update -a
       ```
 
-1. set the IP address for your download target in the `.env` file
-
 ## Included scripts
 
 1. Build & Download to PLCSIM Advanced
