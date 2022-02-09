@@ -1,0 +1,32 @@
+name: '@simatic-ax/template-app'
+version: 0.0.1
+type: app
+author: Siemens AG
+targets:
+  - "plcsim"
+  - "1500"
+variables:
+  APAX_BUILD_ARGS:
+    - --debug
+    - --log Trace
+  BIN_FOLDER: "./bin/plcsim"
+  BIN_FOLDER_HWPLC: "./bin/1500"
+  IP_ADDRESS: "192.168.0.1"
+  WATCHLISTS: "./watchlist"
+scripts:
+  load: sld -i "$BIN_FOLDER" -t "$IP_ADDRESS" -r --accept-security-disclaimer -l debug
+    --default-server-interface
+  loadhwplc: sld -i "$BIN_FOLDER_HWPLC" -t "$IP_ADDRESS" -r
+    --accept-security-disclaimer -l debug --default-server-interface
+  watch: apax mon  -t "$IP_ADDRESS" -f "$WATCHLISTS/default.mon" -c
+  dlsim:
+    - apax build
+    - apax load
+  dlhwplc:
+    - apax build
+    - apax loadhwplc
+devDependencies:
+  "@ax/sdk": 1.0.138
+  "@simatic-ax/snippetscollection": 0.0.6
+registries:
+  '@simatic-ax': 'https://npm.pkg.github.com/'
