@@ -14,11 +14,12 @@ variables:
   IP_ADDRESS: "192.168.0.1"
   WATCHLISTS: "./watchlist"
 scripts:
-  load: sld -i "$BIN_FOLDER" -t "$IP_ADDRESS" -r --accept-security-disclaimer -l debug
-    --default-server-interface
-  loadhwplc: sld -i "$BIN_FOLDER_HWPLC" -t "$IP_ADDRESS" -r
-    --accept-security-disclaimer -l debug --default-server-interface
-  watch: apax mon  -t "$IP_ADDRESS" -f "$WATCHLISTS/default.mon" -c
+  load: sld --input "$BIN_FOLDER" --targetIP "$IP_ADDRESS" --restart
+    --accept-security-disclaimer --log debug --default-server-interface
+  loadhwplc: sld --input "$BIN_FOLDER_HWPLC" --targetIP "$IP_ADDRESS" --restart
+    --accept-security-disclaimer --log debug --default-server-interface
+  watch: apax mon  --targetIP "$IP_ADDRESS" --file "$WATCHLISTS/default.mon"
+    --continuously
   dlsim:
     - apax build
     - apax load
@@ -26,7 +27,7 @@ scripts:
     - apax build
     - apax loadhwplc
 devDependencies:
-  "@ax/sdk": 1.0.138
+  "@ax/sdk": 1.0.144
   "@simatic-ax/snippetscollection": 0.0.6
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
