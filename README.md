@@ -11,6 +11,13 @@
       apax create @simatic-ax/app --registry https://npm.pkg.github.com
       ```
 
+      alternatively run:
+
+      ```cli
+      apax create @simatic-ax/app --registry https://npm.pkg.github.com <work-space-name>
+      ```
+
+
 1. Install dependencies
 
       ```cli
