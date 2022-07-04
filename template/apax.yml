@@ -1,4 +1,4 @@
-name: '@simatic-ax/template-app'
+name: "@simatic-ax/apax-package-name-d7b4b031"
 version: 0.0.1
 type: app
 author: Siemens AG
@@ -27,7 +27,10 @@ scripts:
     - apax build
     - apax loadhwplc
 devDependencies:
-  "@ax/sdk": 1.0.144
-  "@simatic-ax/snippetscollection": 0.0.6
+  "@ax/sdk": 1.0.175
+  "@simatic-ax/snippetscollection": 0.0.13
+  "@ax/trace": 2.3.1
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
+
+  
