@@ -27,10 +27,8 @@ scripts:
     - apax build
     - apax loadhwplc
 devDependencies:
-  "@ax/sdk": 1.0.175
+  "@ax/sdk": 2.0.4
   "@simatic-ax/snippetscollection": 0.0.13
-  "@ax/trace": 2.3.1
+  "@ax/trace": 2.3.2
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
-
-  
