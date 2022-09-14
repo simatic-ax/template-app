@@ -26,6 +26,15 @@ scripts:
   dlhwplc:
     - apax build
     - apax loadhwplc
+  start:
+    - |
+      apax install -L
+      if [ "$1" = "1500" ]; then
+          apax dlhwplc
+      else
+          apax dlsim
+      fi
+      apax watch
 devDependencies:
   "@ax/sdk": 2.0.4
   "@simatic-ax/snippetscollection": 0.0.13
