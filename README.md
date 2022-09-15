@@ -1,16 +1,99 @@
-# Apax Template Package for applications
+# Template for `Application Examples`
 
-## For what is the template helpful?
 
-The template is useful for creating PLC applications (executable on a PLCSIM Advanced or real PLC S7-1500). It's optimized for a creation of application examples. 
+## What is an application example
+
+An application example ist a stand alone project, which demonstrates the usage of one ore more features or libraries. This template is optimized for a creation of application examples for PLC applications (executable on a PLCSIM Advanced or real PLC S7-1500). 
+
+## Create a project from this template
 
 Example: If you want to create an application example `ae-motion-control` then use this template by entering:
 
+```
+apax create @simatic-ax/app --registry https://npm.pkg.github.com ae-motion-control
+```
+
+## Create an application example on GitHub
+
+Example: An application example `ae-motion-control` should be created. 
+
+1. Create a repository `ae-motion-control` on GitHub
+    
+    ![](docs/newrepo.png)
+
+    ![](docs/newrepo2.png)
+   
+    > If public or private depends is an internal decision
+
+1. Add the secrets to the repository (only in the case if it's private)
+
+    ![](docs/secrets.png)
+   
+   > you don't know the secrets? Ask one of the owners or `@sjuergen`
+
+1. Create a repository `template-ae-motion-control` on GitHub which contains the apax package
+
+    ![](docs/newrepo.png)
+
+    ![](docs/newrepo3.png)
+   
+    > If public or private depends is an internal decision
+
+1. If not done, login to the GitHub registry
+
+    ```bash
+    apax login --registry https://npm.pkg.github.com/ --password <your personal access token>
+    ```
+
+    More information you'll find [here](https://github.com/simatic-ax/.sharedstuff/blob/main/doc/personalaccesstoken.md)
+
+1. Create the application example from the template 
+
+    ```bash
+    apax create @simatic-ax/app --registry https://npm.pkg.github.com ae-motion-control
+    ```
+
+1. Add the remote repository to your local repository
+
+    ```
+    git remote add origin git@github.com:simatic-ax/ae-motion-control.git
+    git push -u origin main
+    ```
+1. Install dependencies
+
       ```bash
-      apax create @simatic-ax/app --registry https://npm.pkg.github.com ae-motion-control
+      apax install -L
       ```
 
-## Structure
+1. Optionally update dependencies
+
+      ```bash
+      apax update -a
+      ```
+
+1. Now you can implement the application example
+
+## Release the application example
+
+### Before releasing
+Before you release the application example, all checks have to be done:
+
+- [ ] OSS Clearing
+- [ ] Patent Clearing
+- [ ] ECC (Export control with the [ecc wizzard](https://code-ops.code.siemens.io/ecc-wizard/))
+- [ ] License is up to date
+- [ ] The readme contains a description:
+  - What is this application doing?
+  - How to install the application example
+  - How to start the application example
+- [ ] Application example has been reviewed
+
+### Release the application example
+
+    ![](docs/release.png)
+
+
+## Structure of this template:
 
 ```
 app
@@ -38,78 +121,6 @@ app
  +- README.md
 ```
 
-## How to use it
-
-1. If not done, login to the GitHub registry
-
-    More information you'll find [here](https://github.com/simatic-ax/.sharedstuff/blob/main/doc/personalaccesstoken.md)
-
-1. create a new library project from template 
-      ```bash
-      apax create @simatic-ax/app --registry https://npm.pkg.github.com
-      ```
-
-      alternatively run:
-
-      ```bash
-      apax create @simatic-ax/app --registry https://npm.pkg.github.com <work-space-name>
-      ```
-
-
-1. Install dependencies
-
-      ```bash
-      apax install -L
-      ```
-
-1. Optionally update dependencies
-
-      ```bash
-      apax update -a
-      ```
-
-## Included scripts
-
-1. Build & Download to PLCSIM Advanced
-
-    ```bash
-    apax dlsim
-    ```
-
-1. Build Download to 1500er PLC
-
-    ```bash
-    apax dlhwplc
-    ```
-
-1. Download to PLCSIM Advanced
-
-    ```bash
-    apax loadhwplc
-    ```
-
-1. Download to 1500er PLC
-
-    ```bash
-    apax dlhwplc
-    ```
-
-1. Monitor file `default.mon`
-
-    ```bash
-    apax watch
-    ```
-
-1. apax start [1500]
-
-   ```bash
-   apax start [1500]
-   ```
-
-   * install dependencies 
-   * compile
-   * download to a PLC (for real S7-1500 PLCs use the command `apax start 1500`)
-   * start the monitor the default.mon in the terminal 
 
 ## Learn More
 

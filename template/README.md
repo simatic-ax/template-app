@@ -1,4 +1,4 @@
-# @simatic-ax/apax-package-name-d7b4b031
+# apax-package-name-d7b4b031
 
 ## What is this application doing?
 
@@ -28,15 +28,17 @@
       
 1. If not open, open a terminal in AX Code (`CTRL+SHIFT+ö`)
 
-1. Start the application example 
-   
+
+## Start the application example 
+
+  The application example can be started with the following command:
+
    ```cli
    apax start [1500]
    ```
    > `1500` is required, if you use a real 1500 PLC instead of PLCSIM Advanced.
 
 ## Further information
-
 
 ## License and Legal information
 
