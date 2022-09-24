@@ -1,9 +1,8 @@
 # Template for `Application Examples`
 
-
 ## What is an application example
 
-An application example ist a stand alone project, which demonstrates the usage of one ore more features or libraries. This template is optimized for a creation of application examples for PLC applications (executable on a PLCSIM Advanced or real PLC S7-1500). 
+An application example ist a stand alone project, which demonstrates the usage of one ore more features or libraries. This template is optimized for a creation of application examples for PLC applications (executable on a PLCSIM Advanced or real PLC S7-1500).
 
 ## Create a project from this template
 
@@ -15,20 +14,20 @@ apax create @simatic-ax/app --registry https://npm.pkg.github.com ae-motion-cont
 
 ## Create an application example on GitHub
 
-Example: An application example `ae-motion-control` should be created. 
+Example: An application example `ae-motion-control` should be created.
 
 1. Create a repository `ae-motion-control` on GitHub
-    
+
     ![](docs/newrepo.png)
 
     ![](docs/newrepo2.png)
-   
+
     > If public or private depends is an internal decision
 
 1. Add the secrets to the repository (only in the case if it's private)
 
     ![](docs/secrets.png)
-   
+
    > you don't know the secrets? Ask one of the owners or `@sjuergen`
 
 1. Create a repository `template-ae-motion-control` on GitHub which contains the apax package
@@ -36,7 +35,7 @@ Example: An application example `ae-motion-control` should be created.
     ![](docs/newrepo.png)
 
     ![](docs/newrepo3.png)
-   
+
     > If public or private depends is an internal decision
 
 1. If not done, login to the GitHub registry
@@ -47,7 +46,7 @@ Example: An application example `ae-motion-control` should be created.
 
     More information you'll find [here](https://github.com/simatic-ax/.sharedstuff/blob/main/doc/personalaccesstoken.md)
 
-1. Create the application example from the template 
+1. Create the application example from the template
 
     ```bash
     apax create @simatic-ax/app --registry https://npm.pkg.github.com ae-motion-control
@@ -59,6 +58,7 @@ Example: An application example `ae-motion-control` should be created.
     git remote add origin git@github.com:simatic-ax/ae-motion-control.git
     git push -u origin main
     ```
+
 1. Install dependencies
 
       ```bash
@@ -76,6 +76,7 @@ Example: An application example `ae-motion-control` should be created.
 ## Release the application example
 
 ### Before releasing
+
 Before you release the application example, all checks have to be done:
 
 - [ ] OSS Clearing
@@ -92,8 +93,7 @@ Before you release the application example, all checks have to be done:
 
     ![](docs/release.png)
 
-
-## Structure of this template:
+## Structure of this template
 
 ```
 app
@@ -120,7 +120,6 @@ app
  +- LICENSE.md
  +- README.md
 ```
-
 
 ## Learn More
 
