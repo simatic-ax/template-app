@@ -1,10 +1,15 @@
+# General information
 name: "will-be-set-during-creation"
 version: 0.0.1
-type: app
 author: Siemens AG
-targets:
-  - "plcsim"
-  - "1500"
+# Description for your application example or app
+description: <Description for your application example or app>
+type: app
+#URL to the repository
+repository:
+  type: git
+  url: https://github.com/simatic-ax/io
+# Environment variables
 variables:
   APAX_BUILD_ARGS:
     - --debug
@@ -13,6 +18,11 @@ variables:
   BIN_FOLDER_HWPLC: "./bin/1500"
   IP_ADDRESS: "192.168.0.1"
   WATCHLISTS: "./watchlist"
+# targets to be compiled with apax build
+targets:
+  - "plcsim"
+  - "1500"
+# Apax scripts
 scripts:
   load: sld --input "$BIN_FOLDER" --targetIP "$IP_ADDRESS" --restart
     --accept-security-disclaimer --log debug --default-server-interface
@@ -35,9 +45,11 @@ scripts:
           apax dlsim
       fi
       apax watch
+# Dependencies
 devDependencies:
   "@ax/sdk": 3.0.2
   "@simatic-ax/snippetscollection": 0.0.14
   "@ax/trace": 2.3.4
+# Registry information, to other npm registries where Apax packages are located
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
