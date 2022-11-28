@@ -20,7 +20,7 @@
       axcode apax-package-name-d7b4b031
       ```
 
-## Start the application example
+## Setup the application example
 
 1. Start a PLCSIM Advanced Instance or using a 1500 PLC. Download a TIA Portal created HWCN with a 1500 standard PLC (Default IP Address 192.168.0.1).
 

@@ -8,7 +8,7 @@ An application example ist a stand alone project, which demonstrates the usage o
 
 Example: If you want to create an application example `ae-motion-control` then use this template by entering:
 
-```
+```bash
 apax create @simatic-ax/app --registry https://npm.pkg.github.com ae-motion-control
 ```
 
@@ -18,23 +18,23 @@ Example: An application example `ae-motion-control` should be created.
 
 1. Create a repository `ae-motion-control` on GitHub
 
-    ![](docs/newrepo.png)
+    ![newrepo](docs/newrepo.png)
 
-    ![](docs/newrepo2.png)
+    ![newrepo2](docs/newrepo2.png)
 
     > If public or private depends is an internal decision
 
 1. Add the secrets to the repository (only in the case if it's private)
 
-    ![](docs/secrets.png)
+    ![secrets](docs/secrets.png)
 
    > you don't know the secrets? Ask one of the owners or `@sjuergen`
 
 1. Create a repository `template-ae-motion-control` on GitHub which contains the apax package
 
-    ![](docs/newrepo.png)
+    ![newrepo](docs/newrepo.png)
 
-    ![](docs/newrepo3.png)
+    ![newrepo3](docs/newrepo3.png)
 
     > If public or private depends is an internal decision
 
@@ -54,7 +54,7 @@ Example: An application example `ae-motion-control` should be created.
 
 1. Add the remote repository to your local repository
 
-    ```
+    ```bash
     git remote add origin git@github.com:simatic-ax/ae-motion-control.git
     git push -u origin main
     ```
@@ -89,13 +89,13 @@ Before you release the application example, all checks have to be done:
   - How to start the application example
 - [ ] Application example has been reviewed
 
-### Release the application example
+### Release of the application example
 
-    ![](docs/release.png)
+![release](docs/release.png)
 
 ## Structure of this template
 
-```
+```bash
 app
  |
  +- .github
