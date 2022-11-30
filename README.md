@@ -44,7 +44,7 @@ Example: An application example `ae-motion-control` should be created.
     apax login --registry https://npm.pkg.github.com/ --password <your personal access token>
     ```
 
-    More information you'll find [here](https://github.com/simatic-ax/.sharedstuff/blob/main/doc/personalaccesstoken.md)
+    More information you'll find [here](https://github.com/simatic-ax/.github/blob/main/docs/personalaccesstoken.md)
 
 1. Create the application example from the template
 
