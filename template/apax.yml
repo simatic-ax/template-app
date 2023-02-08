@@ -1,5 +1,5 @@
 # General information
-name: "will-be-set-during-creation"
+name: "apax-package-name-d7b4b031"
 version: 0.0.1
 author: Siemens AG
 # Description for your application example or app
@@ -8,7 +8,7 @@ type: app
 #URL to the repository
 repository:
   type: git
-  url: https://github.com/simatic-ax/io
+  url: https://github.com/simatic-ax/apax-package-name-d7b4b031
 # Environment variables
 variables:
   APAX_BUILD_ARGS:
@@ -47,9 +47,9 @@ scripts:
       apax watch
 # Dependencies
 devDependencies:
-  "@ax/sdk": 3.0.2
-  "@simatic-ax/snippetscollection": 0.0.14
-  "@ax/trace": 2.3.4
+  "@ax/sdk": 3.0.10
+  "@simatic-ax/snippetscollection": 0.0.15
+  "@ax/trace": 2.4.1
 # Registry information, to other npm registries where Apax packages are located
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
