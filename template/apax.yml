@@ -1,5 +1,5 @@
 # General information
-name: "will-be-set-during-creation"
+name: "apax-package-name-d7b4b031"
 version: 0.0.1
 author: Siemens AG
 # Description for your application example or app
@@ -8,7 +8,7 @@ type: app
 #URL to the repository
 repository:
   type: git
-  url: https://github.com/simatic-ax/io
+  url: https://github.com/simatic-ax/apax-package-name-d7b4b031
 # Environment variables
 variables:
   APAX_BUILD_ARGS:
