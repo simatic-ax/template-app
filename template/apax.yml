@@ -49,7 +49,7 @@ scripts:
 devDependencies:
   "@ax/sdk": 3.0.18
   "@simatic-ax/snippetscollection": 0.0.15
-  "@ax/trace": 2.4.2
+  "@ax/trace": 2.7.0
 # Registry information, to other npm registries where Apax packages are located
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
