@@ -47,7 +47,7 @@ scripts:
       apax watch
 # Dependencies
 devDependencies:
-  "@ax/sdk": 3.0.18
+  "@ax/sdk": 2311.0.1
   "@simatic-ax/snippetscollection": 0.0.15
   "@ax/trace": 2.7.0
 # Registry information, to other npm registries where Apax packages are located
