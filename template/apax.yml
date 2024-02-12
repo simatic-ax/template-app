@@ -12,25 +12,34 @@ repository:
 # Environment variables
 variables:
   APAX_BUILD_ARGS:
-    - --debug
-  BIN_FOLDER: "./bin/plcsim"
+    - --debug # Enable debug information for value debugging
+  # Choose bin-folder. Depending on your target.  
+  # BIN_FOLDER: "./bin/1500" # choose for target S7-1500 PLC
+  BIN_FOLDER: "./bin/plcsim" # choose for target PLCSIM Advanced
+  # IP address must match with the IP address of your target device
+  # The IP address in the .vscode/launch.json must be equal  
   IP_ADDRESS: "192.168.0.1"
 # targets to be compiled with apax build
 targets:
-  - "plcsim"
   - "1500"
+  - "plcsim"
+  - "llvm"
 # Apax scripts
 scripts:
-  load: sld --input "$BIN_FOLDER" --targetIP "$IP_ADDRESS" --restart
-    --accept-security-disclaimer --log debug --default-server-interface
+  # call 'apax load' to download the builded program to the target. An 'apax build' might be required upfront
+  load: apax sld load --input $BIN_FOLDER --target $IP_ADDRESS --restart
+    --accept-security-disclaimer --log debug
+  # call 'apax dlsim' to build and download the application to the target
   dlsim:
     - apax build
     - apax load
 # Dependencies
 devDependencies:
   "@ax/sdk": 2311.0.1
-  "@simatic-ax/snippetscollection": 0.0.15
+  "@simatic-ax/snippetscollection": 1.0.0
   "@ax/trace": 2.7.0
 # Registry information, to other npm registries where Apax packages are located
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
+installStrategy: strict
+apaxVersion: 3.1.0
