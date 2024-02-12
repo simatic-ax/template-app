@@ -2,6 +2,6 @@
 CLASS MyTestFixture
     {Test}
     METHOD PUBLIC MyTestMethod
-        ; // AxUnit.Assert.Equal(y, x)
+        AxUnit.Assert.Equal(TRUE, TRUE);
     END_METHOD
 END_CLASS
