@@ -4,12 +4,12 @@
 
 An application example is a standalone project, which demonstrates the usage of one ore more features or libraries. This template is optimized for a creation of application examples for PLC applications (executable on a PLCSIM Advanced or real PLC S7-1500).
 
-## Create a project from an "apax-template"
+## Create a project from this "apax-template"
 
-If you want to create a project based from an apax-template you have to enter the following-scheme in the terminal :
+If you want to create a new Github application example in this community please start with using this apax-template by entering the following-scheme in the terminal :
 
 ```bash
-apax create @<registry-scope>/<template-name> --registry <npm-package-registry-url> <your-new-project-name>
+apax create @simatic-ax/app --registry https://npm.pkg.github.com <your-new-project-name>
 ```
 
 ## Folder-structure of this "app" apax-template
@@ -60,13 +60,14 @@ Example: An application example with the name `ae-motion-control` should be crea
 
     This repository is tailored to be in sync with your local git-repository which holds on to your actual application program.
 
-    Purpose: Later people can create local clones from the repository and all its files.
+    Purpose: Later people can create local clones/ forks from the repository and all its files.
 
     ![newrepo](docs/newrepo.png)
 
     ![newrepo2](docs/newrepo2.png)
 
-    > If public or private depends on internal decisions
+    > As "Description" please start with `Application example:...`.
+    > If "public" or "private" depends on internal decisions.
 
 2. Add the secrets to the repository (only in the case if it's private)
 
@@ -84,7 +85,8 @@ Example: An application example with the name `ae-motion-control` should be crea
 
     ![newrepo3](docs/newrepo3.png)
 
-    > If public or private depends on internal decisions
+    > As "Description" please use the following scheme: `Template "ae-<your-app-name>" / dummy-repo`.
+    > If "public" or "private" depends on internal decisions.
 
 4. Initiate your local repository
 
