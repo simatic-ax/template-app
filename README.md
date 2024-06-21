@@ -49,7 +49,7 @@ app
  | # essential git project files, pls. adjust
  +- CODEOWNERS
  +- README.md
- +- LICENSE.md 
+ +- LICENSE.md
 ```
 
 ## Create an `application example` repository with this apax-template on GitHub
@@ -58,38 +58,38 @@ Step-by-step instructions: for creating & releasing `ae-motion-control` (case ex
 
 1. Create a repository `ae-motion-control` on GitHub
 
-    This repository is tailored to be in sync with your local git-repository which holds on to your actual application program.
+   This repository is tailored to be in sync with your local git-repository which holds on to your actual application program.
 
-    Purpose: Later people can create local clones/ forks from the repository and all its files.
+   Purpose: Later people can create local clones/ forks from the repository and all its files.
 
-    ![newrepo](docs/images/newrepo.png)
+   ![newrepo](docs/images/newrepo.png)
 
-    ![reponame1](docs/images/reponame1.png)
+   ![reponame1](docs/images/reponame1.png)
 
-    - For the actual "Repository name" always start with `ae- ...`
-    - As "Description" please start with `Application example:...`.
-    - If "public" or "private" depends on internal decisions.
+   - For the actual "Repository name" always start with `ae- ...`
+   - As "Description" please start with `Application example:...`.
+   - If "public" or "private" depends on internal decisions.
 
 2. Add the secrets to the repository (only in the case if it's private)
 
-    ![secrets](docs/images/secrets.png)
+   ![secrets](docs/images/secrets.png)
 
    > You don't know the secrets? Ask one of the owners or `@sjuergen`
 
 3. Create an additional repository `template-ae-motion-control` on GitHub
 
-    Unlike the base repository, this "template-..." variant is just there for holding on to the application example apax package, which will be created automatically after a successful "release"-process on GitHub (release-pipeline with GitHub "workflows"). There is no need for you to further maintain this repository after the creation.
+   Unlike the base repository, this "template-..." variant is just there for holding on to the application example apax package, which will be created automatically after a successful "release"-process on GitHub (release-pipeline with GitHub "workflows"). There is no need for you to further maintain this repository after the creation.
 
-    Purpose: Later people can use apax to "create" new projects based on that application project apax package (template functionality).
+   Purpose: Later people can use apax to "create" new projects based on that application project apax package (template functionality).
 
-    ![newrepo](docs/images/newrepo.png)
+   ![newrepo](docs/images/newrepo.png)
 
-    ![reponame2](docs/images/reponame2.png)
+   ![reponame2](docs/images/reponame2.png)
 
-    - For the actual "Repository name" always start with `template-ae- ...`.
-    - As "Description" please use the following scheme: `Template "ae-<your-app-name>" / dummy-repo`.
-    - If "public" or "private" depends on internal decisions.
-    - Add at least a "README.md" and a "LICENSE.md" file
+   - For the actual "Repository name" always start with `template-ae- ...`.
+   - As "Description" please use the following scheme: `Template "ae-<your-app-name>" / dummy-repo`.
+   - If "public" or "private" depends on internal decisions.
+   - Add at least a "README.md" and a "LICENSE.md" file
 
 4. Initiate your local repository
 
@@ -99,47 +99,47 @@ Step-by-step instructions: for creating & releasing `ae-motion-control` (case ex
 
 5. If not done yet, login to the GitHub registry first
 
-    ```bash
-    apax login --registry https://npm.pkg.github.com/
-    ```
+   ```bash
+   apax login --registry https://npm.pkg.github.com/
+   ```
 
-    Follow the instruction and type in your credentials.
+   Follow the instruction and type in your credentials.
 
-    More information you'll find [here](https://github.com/simatic-ax/.github/blob/main/docs/personalaccesstoken.md)
+   More information you'll find [here](https://github.com/simatic-ax/.github/blob/main/docs/personalaccesstoken.md)
 
 6. Create a new project based on the GitHub app apax-template
 
-    After a successful login you can follow-up with entering:
+   After a successful login you can follow-up with entering:
 
-    ```bash
-    apax create @simatic-ax/app --registry https://npm.pkg.github.com ae-motion-control
-    ```
+   ```bash
+   apax create @simatic-ax/app --registry https://npm.pkg.github.com ae-motion-control
+   ```
 
-    Here: the application example will be named "ae-motion-control" and the project-folder now is predefined with the templates contents.
+   Here: the application example will be named "ae-motion-control" and the project-folder now is predefined with the templates contents.
 
 7. Connect the previous created remote GitHub repository to your local Git repository
 
-    A apax "create" command will always initiate a local Git repository. This one must be synced  with the "simatic-ax/ae-motion-control" GitHub repository now.
+   A apax "create" command will always initiate a local Git repository. This one must be synced with the "simatic-ax/ae-motion-control" GitHub repository now.
 
-    ```bash
-    git remote add origin git@github.com:simatic-ax/ae-motion-control.git
-    ```
+   ```bash
+   git remote add origin git@github.com:simatic-ax/ae-motion-control.git
+   ```
 
-    ```bash
-    git push -u origin main
-    ```
+   ```bash
+   git push -u origin main
+   ```
 
 8. Install the project dependencies
 
-      ```bash
-      apax install
-      ```
+   ```bash
+   apax install
+   ```
 
 9. Optionally update its dependencies
 
-      ```bash
-      apax update
-      ```
+   ```bash
+   apax update
+   ```
 
 10. Now you can implement the application example
 
@@ -174,12 +174,12 @@ Draft a new "Release"-tag within your base GitHub repository
 - choose an appropriate release-title
 - let github generate release-notes
 - publish release
-  
+
 ![release1](docs/images/release1.png)
 ![release2](docs/images/release2.png)
 ![release3](docs/images/release3.png)
 
-> This action may only can be performed by one of the community-admins.  
+> This action may only can be performed by one of the community-admins.
 
 ## Congratulations 🐱‍🏍
 
@@ -187,7 +187,7 @@ You finally contributed to the simatic-ax community offering apax-packages for e
 
 KEEP GOING 🐱‍💻!
 
-> BE AWARE: Only successful GitHub workflows (pipelines) will create the package at our GitHub package-registry (scope: @simatic-ax).  
+> BE AWARE: Only successful GitHub workflows (pipelines) will create the package at our GitHub package-registry (scope: @simatic-ax).
 
 ## Learn More
 
