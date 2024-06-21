@@ -2,44 +2,45 @@
 name: "@simatic-ax/apax-package-name-d7b4b031"
 version: 0.0.1
 author: Siemens AG
+type: app
 # Description for your application example or app
 description: <Description for your application example or app>
-type: app
 #URL to the repository
 repository:
   type: git
   url: https://github.com/simatic-ax/apax-package-name-d7b4b031
-# Environment variables
+# Targets to be compiled with 'apax build'
+targets:
+  - "1500"
+  - "llvm"
+
+# Registry information, to other npm-registries where Apax packages are located
+registries:
+  '@simatic-ax': 'https://npm.pkg.github.com/'
+# Install settings
+installStrategy: strict
+apaxVersion: 3.2.1
+# Dependencies
+devDependencies:
+  "@ax/sdk": 2405.0.0
+  "@simatic-ax/snippetscollection": 1.0.0
+dependencies:
+  "@ax/system": 7.0.17 # this is an example lib-dependency for your code, pls. adjust
+
+# Project variables
 variables:
   APAX_BUILD_ARGS:
-    - --debug # Enable debug information for value debugging
-  # Choose bin-folder. Depending on your target.  
-  # BIN_FOLDER: "./bin/1500" # choose for target S7-1500 PLC
-  BIN_FOLDER: "./bin/plcsim" # choose for target PLCSIM Advanced
+    - --debug # Enable debug information for value debugging 
+  BIN_FOLDER: "./bin/1500" # choose your target RT, here : any S7-1500 PLC
   # IP address must match with the IP address of your target device
   # The IP address in the .vscode/launch.json must be equal  
   IP_ADDRESS: "192.168.0.1"
-# targets to be compiled with apax build
-targets:
-  - "1500"
-  - "plcsim"
-  - "llvm"
+
 # Apax scripts
 scripts:
   # call 'apax load' to download the builded program to the target. An 'apax build' might be required upfront
-  load: apax sld load --input $BIN_FOLDER --target $IP_ADDRESS --restart
-    --accept-security-disclaimer --log debug
-  # call 'apax dlsim' to build and download the application to the target
-  dlsim:
+  load: apax sld load --input $BIN_FOLDER --target $IP_ADDRESS --restart --accept-security-disclaimer --log debug
+  # call 'apax dlplc' to build and download the application to the target
+  dlplc:
     - apax build
     - apax load
-# Dependencies
-devDependencies:
-  "@ax/sdk": 2311.0.1
-  "@simatic-ax/snippetscollection": 1.0.0
-  "@ax/trace": 2.7.0
-# Registry information, to other npm registries where Apax packages are located
-registries:
-  '@simatic-ax': 'https://npm.pkg.github.com/'
-installStrategy: strict
-apaxVersion: 3.1.0
