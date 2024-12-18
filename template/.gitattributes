@@ -1,2 +1,2 @@
 ﻿# `.gitattributes` reclassify `.st` files as iec-st:
-** linguist-vendored
+**/ linguist-vendored
