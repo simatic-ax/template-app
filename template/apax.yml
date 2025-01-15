@@ -22,7 +22,7 @@ installStrategy: strict
 apaxVersion: 3.2.1
 # Dependencies
 devDependencies:
-  "@ax/sdk": 2405.0.0
+  "@ax/sdk": 2405.3.0
   "@simatic-ax/snippetscollection": 1.0.0
 dependencies:
   "@ax/system": 7.0.17 # this is an example lib-dependency for your code, pls. adjust
