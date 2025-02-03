@@ -18,13 +18,13 @@ apax create @simatic-ax/app --registry https://npm.pkg.github.com
 app
  |
  +- .github
- |      | # default GitHub workflows any gh-community-scope app-repo should have (ignore)
- |      +- lint-repo.yml
- |      +- release-applicationexample.yml
+ |   | # default GitHub workflows any gh-community-scope app-repo should have (ignore)
+ |   +- lint-repo.yml
+ |   +- release-applicationexample.yml
  |
  +- docs
- |    | # the place for additional user-documentation
- |    +- app.md
+ |   | # the place for additional user-documentation
+ |   +- app.md
  |
  +- src
  |   | # adjust and add user-programs here
@@ -49,7 +49,7 @@ app
  | # essential git project files, pls. adjust
  +- CODEOWNERS
  +- README.md
- +- LICENSE.md
+ +- LICENSE.md #do not change!
 ```
 
 ## Create an `application example` repository with this apax-template on GitHub
