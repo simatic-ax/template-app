@@ -39,15 +39,18 @@ app
  |   | # adjust and add your watchlists here
  |    +- default.mon
  |
- | # additional meta-information for GitHub/-workflows (ignore)
+ | # additional meta-information for GitHub/-workflows
  +- .gitattributes
  +- .gitignore
  +- .markdownlint.yml
  +- apax-files-section.yml
+ +- repolint.json
+ | # settings file for activate of renovate-bot
+ +- renovate.json
+ |
  | # adjust the project description file / add apax-scripts
  +- apax.yml
- | # settings file for activate of renovate
- +- renovate.json
+ |
  | # essential git project files, pls. adjust
  +- CODEOWNERS
  +- README.md
