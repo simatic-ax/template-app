@@ -57,7 +57,7 @@ jobs:
       - name: Check links
         uses: gaurav-nelson/github-action-markdown-link-check@v1
         with:
-          modifiedFilesOnly: true
+          check-modified-files-only: 'yes'
 
       - name: Upload build artifacts
         if: ${{ github.event_name == 'workflow_call' || github.event_name == 'release'}}
