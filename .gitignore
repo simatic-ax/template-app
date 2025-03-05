@@ -1,5 +1,7 @@
-.apax
-.env
+/.apax/
+/.env/
+/.vscode/
 bin
+obj
+testresult
 *.tgz
-/.vs
