@@ -1,2 +1,2 @@
-﻿# `.gitattributes` reclassify `.st` files as iec-st:
-** linguist-vendored
+﻿# disable linguist detection for ST files
+*.st linguist-detectable=false
