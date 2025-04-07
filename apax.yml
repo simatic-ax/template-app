@@ -5,5 +5,7 @@ author: Siemens AG
 description: SIMATIC AX template for Application examples or Applications
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
+keywords:
+  - "template"
 files:
   - 'template'
