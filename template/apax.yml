@@ -3,12 +3,15 @@ name: "@simatic-ax/apax-package-name-d7b4b031"
 version: 0.0.1
 author: Siemens AG
 type: app
+
 # Description for your application example or app
 description: <Description for your application example or app>
+
 #URL to the repository
 repository:
   type: git
   url: https://github.com/simatic-ax/apax-package-name-d7b4b031
+
 # Targets to be compiled with 'apax build'
 targets:
   - "1500"
@@ -17,9 +20,11 @@ targets:
 # Registry information, to other npm-registries where Apax packages are located
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
+
 # Install settings
 installStrategy: strict
 apaxVersion: 3.2.1
+
 # Dependencies
 devDependencies:
   "@ax/sdk": 2411.1.0

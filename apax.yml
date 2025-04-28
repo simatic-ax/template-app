@@ -3,15 +3,9 @@ version: 0.0.0-placeholder
 type: generic
 author: Siemens AG
 description: SIMATIC AX template for Application examples or Applications
-scripts:
-  publishpackage:
-    - apax publish --package *.apax.tgz --registry 'https://npm.pkg.github.com/'
-    - rm *.apax.tgz -f
-  createpackage:
-    - apax version $1
-    - apax pack
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
+keywords:
+  - "template"
 files:
-  - "./template"
-  - "!./template/.git"
+  - 'template'
