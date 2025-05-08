@@ -21,13 +21,12 @@ targets:
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
 
-# Install settings
-installStrategy: strict
-apaxVersion: 3.2.1
-
 # Dependencies
+catalogs:
+  "@ax/simatic-ax": ^2504.0.0
+
 devDependencies:
-  "@ax/sdk": 2411.1.0
+  "@ax/sdk": 2504.0.0
   "@simatic-ax/snippetscollection": 1.0.0
 
 # Project variables
