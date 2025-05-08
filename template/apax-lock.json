@@ -11,7 +11,7 @@
       "@simatic-ax/snippetscollection": "1.0.0"
     },
     "catalogs": {
-      "@ax/simatic-ax": "^2504.0.0"
+      "@ax/simatic-ax": "2504.0.0"
     }
   },
   "packages": {
