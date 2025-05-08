@@ -24,8 +24,8 @@ apax create @simatic-ax/app --registry https://npm.pkg.github.com
         |      |
         |      +- .github
         |      |   | 
+        |      |   |- application-example-release-workflow.yml
         |      |   |- package-development-workflow.yml
-        |      |   |- package-release-workflow.yml
         |      |
         |      +- docs
         |      |   | # the place for additional user-documentation
