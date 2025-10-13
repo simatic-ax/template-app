@@ -1,4 +1,4 @@
-# Template for SIMATIC AX `app` on GitHub
+## Template for SIMATIC AX `app` on GitHub
 
 This repository contains an apax template for SIMATIC AX projects of type `app`, which can be used by contributors of the [SIMATIC AX GitHub community](https://github.com/simatic-ax). The template provides a pre-defined structure and GitHub workflows to enable proper implementation and maintenance of a SIMATIC AX app on GitHub
 
