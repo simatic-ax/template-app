@@ -2,7 +2,7 @@ name: '@simatic-ax/template-app'
 version: 0.0.0-placeholder
 type: generic
 author: Siemens AG
-description: SIMATIC AX template for Application examples or Applications
+description: "Project template for creating SIMATIC AX application repositories with predefined structure and GitHub workflows"
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
 keywords:
