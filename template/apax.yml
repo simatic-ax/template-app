@@ -30,10 +30,10 @@ publicKeys:
 
 # Dependencies
 catalogs:
-  "@ax/simatic-ax": 2510.10.0
+  "@ax/simatic-ax": 2510.11.0
 
 devDependencies:
-  "@ax/sdk": 2510.10.0
+  "@ax/sdk": 2510.11.0
   "@simatic-ax/snippetscollection": 1.1.0
 
 # Project variables
