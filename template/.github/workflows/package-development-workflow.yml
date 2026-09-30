@@ -55,8 +55,16 @@ jobs:
       - name: Test source code
         uses: simatic-ax/actions/apax-test@v4
 
-      - name: Check links
-        uses: gaurav-nelson/github-action-markdown-link-check@v1
+  check-links:
+    name: Check links
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v7
         with:
-          check-modified-files-only: 'yes'
-          base-branch: 'main'
+          ref: ${{ inputs.ref != '' && inputs.ref || github.ref }}
+
+      - name: Check links in Markdown files
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress './**/*.md'
